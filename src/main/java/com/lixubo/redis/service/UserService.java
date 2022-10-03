@@ -13,6 +13,6 @@ import com.lixubo.redis.entity.UserEntity;
 public interface UserService extends IService<UserEntity> {
 
 
-
+    UserEntity queryById(Long id);
 }
 

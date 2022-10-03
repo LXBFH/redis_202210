@@ -41,8 +41,7 @@ public class UserController {
 
     @GetMapping("/{id}")
     public UserEntity select(@PathVariable Long id) {
-        UserEntity userEntity = userMapper.selectById(id);
-        return userEntity;
+        return userService.queryById(id);
     }
 
     @GetMapping("/list")
