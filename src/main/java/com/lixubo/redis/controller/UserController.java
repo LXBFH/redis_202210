@@ -39,6 +39,11 @@ public class UserController {
     @Resource
     private UserMapper userMapper;
 
+    /**
+     * 根据id查询
+     * @param id
+     * @return
+     */
     @GetMapping("/{id}")
     public UserEntity select(@PathVariable Long id) {
         return userService.queryById(id);
@@ -77,5 +82,9 @@ public class UserController {
         return insert;
     }
 
+    @PostMapping("/updateLog")
+    public UserEntity updateLog(@RequestBody UserEntity userEntity){
+        return userService.update(userEntity);
+    }
 
 }

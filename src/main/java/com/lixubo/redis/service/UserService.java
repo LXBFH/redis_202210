@@ -14,5 +14,7 @@ public interface UserService extends IService<UserEntity> {
 
 
     UserEntity queryById(Long id);
+
+    UserEntity update(UserEntity userEntity);
 }
 
